@@ -375,7 +375,7 @@ function CricketMatch() {
     };
 
     try {
-      await axios.post(`${process.env.VITE_BACKEND_URL}/allmatches`, matchData);
+      await axios.post(`https://cric-score-vhpw.onrender.com/allmatches`, matchData);
       toast("✅ Match Saved Successfully to Database!");
       navigate("/");
       console.log(matchData);

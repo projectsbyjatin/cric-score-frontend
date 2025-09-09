@@ -12,7 +12,7 @@ function SingleMatchPage() {
       
       try {
         
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/matches/${id}`);
+        const response = await axios.get(`https://cric-score-vhpw.onrender.com/matches/${id}`);
         setMatch(response.data);
 
       } catch (error) {

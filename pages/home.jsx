@@ -102,7 +102,7 @@ function HomePage() {
   useEffect(() => {
     const fetchRecentMatches = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/matches/recent`);
+        const response = await axios.get(`https://cric-score-vhpw.onrender.com/matches/recent`);
         setRecentMatches(response.data);
         console.log("Response data:", response);
         console.log("Fetched recent matches:", response.data);
