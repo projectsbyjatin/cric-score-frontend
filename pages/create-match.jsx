@@ -375,7 +375,7 @@ function CricketMatch() {
     };
 
     try {
-      await axios.post("http://localhost:2020/allmatches", matchData);
+      await axios.post(`${process.env.VITE_BACKEND_URL}/allmatches`, matchData);
       toast("✅ Match Saved Successfully to Database!");
       navigate("/");
       console.log(matchData);

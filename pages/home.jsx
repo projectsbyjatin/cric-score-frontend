@@ -89,11 +89,11 @@
 
 // export default HomePage;
 
-
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+
 
 function HomePage() {
   const [recentMatches, setRecentMatches] = useState([]);
@@ -102,8 +102,10 @@ function HomePage() {
   useEffect(() => {
     const fetchRecentMatches = async () => {
       try {
-        const response = await axios.get("http://localhost:2020/matches/recent");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/matches/recent`);
         setRecentMatches(response.data);
+        console.log("Response data:", response);
+        console.log("Fetched recent matches:", response.data);
       } catch (error) {
         toast.error("Failed to fetch matches!");
       }

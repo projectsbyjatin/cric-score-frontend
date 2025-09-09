@@ -10,7 +10,7 @@ function AllMatchesPage() {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await axios.get("http://localhost:2020/matches");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/matches`);
         setMatches(response.data);
       } catch (error) {
         toast.error("Failed to fetch matches!");

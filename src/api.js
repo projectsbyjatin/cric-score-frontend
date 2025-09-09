@@ -1,4 +1,4 @@
 // src/api.js
 import axios from 'axios';
-const api = axios.create({ baseURL: 'http://localhost:2020/api' });
+const api = axios.create({ baseURL: `${import.meta.env.VITE_BACKEND_URL}/api` });
 export default api;
